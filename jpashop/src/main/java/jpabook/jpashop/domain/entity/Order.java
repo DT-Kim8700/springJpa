@@ -57,12 +57,12 @@ public class Order {
     /** 연관관계 편의 메서드 */
     public void setMember(Member member){
         this.member = member;
-        this.member.getOrderList().add(this);
+        member.getOrderList().add(this);
     }
 
     public void setDelivery(Delivery delivery){
         this.delivery = delivery;
-        this.delivery.setOrder(this);
+        delivery.setOrder(this);
     }
 
     public void addOrderItem(OrderItem orderItem){
