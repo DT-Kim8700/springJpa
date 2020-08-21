@@ -66,9 +66,9 @@ public class MemberApiController {
 //        List<Member> memberList = memberService.findMemberList();
 //
 //        return memberList;
-//    }     == > 단순히 배열 형태로 값을 돌려주는 것보다 한 번 더 감싸서 JSON의 오브젝트 형태로 돌려주는 것이 좋다.
-//              배열의 경우 같은 타입만 넣을 수 있기 때문에(여기서는 Member 타입) 차후 다른 형태의 타입을 넣을 수가 없는 반면
-//              오브젝트 형태는 어떤 타입도 받을 수 있기 때문에 차후 유지보수가 용이하다.
+//    }     == > 단순히 배열 형태로 값을 돌려주는 것보다 한 번 더 감싸서 오브젝트 형태로 돌려주는 것이 좋다.
+//              배열의 경우 같은 타입만 넣을 수 있기 때문에(여기서는 Member 타입) 차후 다른 형태의 타입을 추가할 수가 없는 반면
+//              오브젝트 형태는 어떤 타입도 추가할 수 있기 때문에 차후 유지보수가 용이하다.
 
     @GetMapping("/api/ver2/members")
     public ResultMemberList memberListV2() {

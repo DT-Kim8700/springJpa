@@ -37,10 +37,6 @@ public class ItemService {
         fineItem.setIsbn(isbn);
     }
 
-
-
-
-
     // 기존에 아이템이 있을 경우 해당 아이템을 갱신하는 메세지
     private void validateDuplicateItem(Item item){
         List<Item> findItem = itemRepository.findByTitle(item.getTitle());

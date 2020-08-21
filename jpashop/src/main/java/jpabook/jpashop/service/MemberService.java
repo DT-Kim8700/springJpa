@@ -12,7 +12,7 @@ import java.util.List;
 @Transactional(readOnly = true)
 // DB에 데이터를 추가하는 것이 아닌 단순히 읽기 전용으로 쓸 때 옵션을 추가한다. 리소스 관리 측면에서 이점이 있다.
 @RequiredArgsConstructor
-public class MemberService {
+public class MemberService {        // 기능 로직
 
 
     private final MemberRepository memberRepository;

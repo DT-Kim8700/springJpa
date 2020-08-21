@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class MemberRepository {     // 리포지토리에서는 기능 로직을 만든다.
+public class MemberRepository {     // DB와 연관되어 처리하는 로직
 
 //    @PersistenceContext     // 스프링에서 EntityManager를 만들어서 해당 변수에 주입해준다.
 //    private EntityManager em;
