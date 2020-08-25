@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +30,7 @@ public class OrderItem {
     // 주인
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "order_id")
+    @JsonIgnore
     private Order order;
 
     @ManyToOne(fetch = LAZY)

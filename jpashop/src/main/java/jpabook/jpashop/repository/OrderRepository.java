@@ -1,14 +1,16 @@
 package jpabook.jpashop.repository;
 
+import jpabook.jpashop.domain.embedded.Address;
 import jpabook.jpashop.domain.entity.Order;
+import jpabook.jpashop.domain.enumC.OrderStatus;
 import lombok.RequiredArgsConstructor;
-import org.dom4j.QName;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -102,5 +104,14 @@ public class OrderRepository {
         return em.createQuery(cq).setMaxResults(1000).getResultList();
     }
 
+
+    public List<Order> findAllMemberWithDelivery() {
+        return em.createQuery(
+                "select o from Order o " +
+                        "join fetch o.member m " +
+                        "join fetch o.delivery d", Order.class)
+                .getResultList();
+
+    }
 
 }

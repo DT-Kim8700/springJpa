@@ -14,6 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 
+
+
+// 데이터를 넣어 테스트하기 위해 작성한 클래스
 @Component
 @RequiredArgsConstructor
 public class InitDB {

@@ -1,7 +1,9 @@
 package jpabook.jpashop;
 
+import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class JpashopApplication {
@@ -15,4 +17,9 @@ public class JpashopApplication {
 	 * - 실행 후 포트 번호 확인
 	 * - compiler - annotation processor - Enable annotation processing 체크
 	 * */
+
+	@Bean
+	Hibernate5Module hibernate5Module(){
+		return new Hibernate5Module();
+	}
 }

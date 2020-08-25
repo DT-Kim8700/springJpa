@@ -1,6 +1,7 @@
 package jpabook.jpashop.domain.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jpabook.jpashop.domain.embedded.Address;
 import jpabook.jpashop.domain.enumC.DeliveryStatus;
 import lombok.Getter;
@@ -30,6 +31,7 @@ public class Delivery {
      * 연관 관계
      */
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "delivery")
+    @JsonIgnore
     private Order order;
 
 
